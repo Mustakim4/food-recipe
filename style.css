@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+}
+
+.navbar_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.navbar_section .nav_first_div img {
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin: 15px;
+}
+
+.navbar_section .nav_first_div span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar_section .nav_second_div {
+    width: 50%;
+}
+
+/* search section */
+.searchDiv {
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.searchDiv #searchFood {
+    width: 100%;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+
+.searchDiv .searchIcon {
+    padding: 15px;
+    font-size: 25px;
+    background-color: rgb(250, 171, 61);
+    border-radius: 0 10px 10px 0;
+}
+
+#searchFood:focus,
+#searchFood:focus+i.searchIcon {
+    outline: 3px solid rgb(250, 171, 61);
+}
+
+/* hero section */
+
+.hero {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 325px));
+    justify-content: space-around;
+}
+
+.hero .card {
+    width: 300px;
+    height: auto;
+    background-color: rgb(59, 174, 250);
+    box-shadow: 3px 3px 30px 10px;
+    border-radius: 5px;
+    margin: 30px 10px;
+    cursor: pointer;
+}
+
+.hero .card .apiImg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 280px;
+    height: 280px;
+    margin: 10px;
+}
+
+.hero .card .dishName {
+    width: 95%;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.hero .card .line {
+    width: 90%;
+    height: 1px;
+    margin: 8px auto;
+    background-color: rgb(111, 107, 107);
+}
+
+.hero .card .calIng {
+    display: flex;
+    font-size: 15px;
+    justify-content: space-evenly;
+}
+
+.hero .card .sourceLink {
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.hero .card .calIng div span {
+    margin-right: 5px;
+}
+
+.hero .card .calIng #cal::after {
+    content: '';
+    margin-left: 20px;
+    border: 1px solid rgba(124, 122, 122, 0.672);
+}
+
+#btn {
+    padding: 5px 15px;
+    margin: 15px 47%;
+    text-align: center;
+    background: transparent;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+#btn:hover {
+    border: 1px solid rgb(28, 150, 244);
+    background-color: rgb(28, 150, 244);
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 20px;
+}
+
+@media (max-width:550px) {
+
+    .navbar_section .nav_first_div span {
+        font-size: 15px;
+    }
+
+    .hero {
+        justify-items: center;
+    }
+
+    .hero .card {
+        width: 225px;
+    }
+
+    .hero .card .apiImg {
+        width: 200px;
+        height: 200px;
+    }
+
+    .navbar_section {
+        justify-content: space-around;
+    }
+
+    .searchDiv #searchFood {
+        font-size: 20px;
+    }
+
+    .searchDiv .searchIcon {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+}
